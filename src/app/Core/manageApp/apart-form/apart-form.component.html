@@ -1,0 +1,46 @@
+<form [formGroup]="fg">
+    <label>numap</label>
+    <input type="text" formControlName="numap">
+    <div *ngIf="fg.get('name')?.invalid && fg.get('name')?.touched">
+        <div *ngIf="fg.get('name')?.errors?.['required']">
+           numap required
+        </div>
+    </div>
+
+    <label>FloorNub</label>
+    <input type="text" formControlName="FloorNub">
+    <div *ngIf="fg.get('FloorNub')?.errors?.['required']">
+        FloorNub required
+     </div>
+    <label>surface</label>
+    <input type="text" formControlName="surface">
+    <div *ngIf="fg.get('surface')?.errors?.['required']">
+        surface required
+     </div>
+    <label>terrace</label>
+    <div formControlName="terrace">
+        <div *ngIf="fg.get('terrace')?.errors?.['required']">
+            terrace required
+         </div>
+        <label>Yes</label>
+    <input type="radio" value="yes">
+    <label>No</label>
+    <input type="radio" value="no">
+    </div>
+    <label>surfaceterrace</label>
+    <input type="text" formControlName="surfaceterrace">
+    <label>cat</label>
+    <div formControlName="cat"> 
+        <label>S+1</label>
+    <input type="radio" value="S+1">
+    <label>S+2</label>
+    <input type="radio" value="S+2">
+    <label>S+3</label>
+    <input type="radio" value="S+3">
+    </div>
+    <label>desc</label>
+    <input type="text" formControlName="desc">
+    <label>residence</label>
+    <input type="text" formControlName="residence">
+    <input type="submit" value="save" (click)="showForm()">
+    </form>
