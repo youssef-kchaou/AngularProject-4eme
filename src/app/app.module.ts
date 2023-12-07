@@ -13,6 +13,7 @@ import { DeltailResidenceComponent } from './Core/deltail-residence/deltail-resi
 import { NotfoundComponent } from './shared/notfound/notfound.component';
 import { ApartmentsComponent } from './Core/apartments/apartments.component';
 import { ApartFormComponent } from './Core/manageApp/apart-form/apart-form.component';
+import { ErrorsComponent } from './shared/errors/errors.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ApartFormComponent } from './Core/manageApp/apart-form/apart-form.compo
     NotfoundComponent,
     ApartmentsComponent,
     ApartFormComponent,
+    ErrorsComponent,
   ],
   imports: [
     BrowserModule,

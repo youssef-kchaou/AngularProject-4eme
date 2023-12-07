@@ -2,16 +2,12 @@
     <label>numap</label>
     <input type="text" formControlName="numap">
     <div *ngIf="fg.get('name')?.invalid && fg.get('name')?.touched">
-        <div *ngIf="fg.get('name')?.errors?.['required']">
-           numap required
-        </div>
+        <app-errors [errormsg]="fg.get('numap')?.errors"></app-errors>
     </div>
 
     <label>FloorNub</label>
     <input type="text" formControlName="FloorNub">
-    <div *ngIf="fg.get('FloorNub')?.errors?.['required']">
-        FloorNub required
-     </div>
+    <app-errors [errormsg]="fg.get('FloorNub')?.errors"></app-errors>
     <label>surface</label>
     <input type="text" formControlName="surface">
     <div *ngIf="fg.get('surface')?.errors?.['required']">
